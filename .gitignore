@@ -1,0 +1,5 @@
+*.pyc
+*.project
+*.pydevproject
+*.jpg
+jupiter/settings/__init__.py
