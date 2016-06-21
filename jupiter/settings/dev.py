@@ -2,7 +2,7 @@ from jupiter.settings.common_settings import *
 
 DEBUG = True
 
-DEFAULT_SITE_DOMAIN = 'http://localhost:5001'
+DEFAULT_SITE_DOMAIN = 'http://localhost:8000'
 IMAGE_DOMAIN = 'http://localhost:8000'
 THUMBOR_SERVER_URL = 'http://localhost:8888'
 
