@@ -34,7 +34,7 @@ DATABASES = {
         'NAME': 'heroku_573805d7138bae0',
         'USER': 'b2830c5a2881b0',
         'PASSWORD': '656cd551',
-        'HOST': '',
+        'HOST': 'mysql://b2830c5a2881b0:656cd551@us-cdbr-iron-east-04.cleardb.net/heroku_573805d7138bae0?reconnect=true',
         'PORT': '',
     }
 }
