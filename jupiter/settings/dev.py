@@ -31,9 +31,9 @@ else:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'jupiter',
-        'USER': 'omprakash',
-        'PASSWORD': 'OPjupiteR@32!',
+        'NAME': 'heroku_573805d7138bae0',
+        'USER': 'b2830c5a2881b0',
+        'PASSWORD': '656cd551',
         'HOST': '',
         'PORT': '',
     }
