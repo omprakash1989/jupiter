@@ -41,7 +41,7 @@ else:
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'd4vvb2rc39tbn8',
         'USER': 'wzbddhtsxwiffw',
         'PORT': '5432',
