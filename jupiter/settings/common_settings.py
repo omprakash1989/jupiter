@@ -138,57 +138,57 @@ ALLOWED_HOSTS = [
 ]
 
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'simple': {
-            'format': '[%(asctime)s] %(levelname)s %(module)s %(message)s'
-        },
-    },
-    'handlers': {
-        'file': {
-            'level': 'INFO',
-            'class': 'logging.handlers.TimedRotatingFileHandler',
-            'filename': '/var/log/jupiter_errors/error.log',
-            'when': 'midnight',
-            'backupCount': 10,
-            'formatter': 'simple'
-
-        },
-        'auth_log': {
-            'level': 'INFO',
-            'class': 'logging.handlers.TimedRotatingFileHandler',
-            'filename': '/var/log/jupiter/auth.log',
-            'when': 'midnight',
-            'backupCount': 10,
-            'formatter': 'simple'
-
-        },
-        'console': {
-            'class': 'logging.StreamHandler',
-
-        },
-        'mail_admins': {
-            'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler'
-        }
-    },
-    'loggers': {
-        'request_log.middleware': {
-            'handlers': ['file'],
-            'level': 'INFO',
-            'propagate': True,
-
-        },
-        'django.request': {
-            'handlers': ['file', 'mail_admins'],
-            'level': 'ERROR',
-            'propagate': True
-        },
-        'auth_logger': {
-            'handlers': ['auth_log'],
-            'level': 'ERROR',
-            'propagate': True
-        },
-    }
+    # 'version': 1,
+    # 'disable_existing_loggers': False,
+    # 'formatters': {
+    #     'simple': {
+    #         'format': '[%(asctime)s] %(levelname)s %(module)s %(message)s'
+    #     },
+    # },
+    # 'handlers': {
+    #     'file': {
+    #         'level': 'INFO',
+    #         'class': 'logging.handlers.TimedRotatingFileHandler',
+    #         'filename': '/var/log/jupiter_errors/error.log',
+    #         'when': 'midnight',
+    #         'backupCount': 10,
+    #         'formatter': 'simple'
+    #
+    #     },
+    #     'auth_log': {
+    #         'level': 'INFO',
+    #         'class': 'logging.handlers.TimedRotatingFileHandler',
+    #         'filename': '/var/log/jupiter/auth.log',
+    #         'when': 'midnight',
+    #         'backupCount': 10,
+    #         'formatter': 'simple'
+    #
+    #     },
+    #     'console': {
+    #         'class': 'logging.StreamHandler',
+    #
+    #     },
+    #     'mail_admins': {
+    #         'level': 'ERROR',
+    #         'class': 'django.utils.log.AdminEmailHandler'
+    #     }
+    # },
+    # 'loggers': {
+    #     'request_log.middleware': {
+    #         'handlers': ['file'],
+    #         'level': 'INFO',
+    #         'propagate': True,
+    #
+    #     },
+    #     'django.request': {
+    #         'handlers': ['file', 'mail_admins'],
+    #         'level': 'ERROR',
+    #         'propagate': True
+    #     },
+    #     'auth_logger': {
+    #         'handlers': ['auth_log'],
+    #         'level': 'ERROR',
+    #         'propagate': True
+    #     },
+    # }
 }
