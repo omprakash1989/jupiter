@@ -1,4 +1,6 @@
 from jupiter.settings.common_settings import *
+import dj_database_url
+
 
 DEBUG = True
 
@@ -27,17 +29,19 @@ if DEBUG:
 else:
     LOG_LEVEL = "INFO"
 
+DATABASES = {}
+DATABASES['default'] =  dj_database_url.config()
 # Change db host name here once the production db is setup
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_573805d7138bae0',
-        'USER': 'b2830c5a2881b0',
-        'PASSWORD': '656cd551',
-        'HOST': 'mysql://b2830c5a2881b0:656cd551@us-cdbr-iron-east-04.cleardb.net/heroku_573805d7138bae0?reconnect=true',
-        'PORT': '',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'heroku_573805d7138bae0',
+#         'USER': 'b2830c5a2881b0',
+#         'PASSWORD': '656cd551',
+#         'HOST': 'mysql://b2830c5a2881b0:656cd551@us-cdbr-iron-east-04.cleardb.net/heroku_573805d7138bae0?reconnect=true',
+#         'PORT': '',
+#     }
+# }
 
 # DEBUG TOOLBAR.
 ENABLE_DEBUG_TOOLBAR = False
