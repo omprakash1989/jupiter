@@ -2,8 +2,8 @@ from jupiter.settings.common_settings import *
 
 DEBUG = True
 
-DEFAULT_SITE_DOMAIN = 'http://localhost:8000/'
-IMAGE_DOMAIN = 'http://localhost:8000'
+DEFAULT_SITE_DOMAIN = 'http://scrambledjupiter.herokuapp.com/'
+IMAGE_DOMAIN = 'http://scrambledjupiter.herokuapp.com'
 THUMBOR_SERVER_URL = 'http://localhost:8888'
 
 OMS_API_POINT = 'http://localhost:8888/api/v1/oms/'
@@ -30,11 +30,12 @@ else:
 # Change db host name here once the production db is setup
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'jupiter',
-        'USER': 'omprakash',
-        'PASSWORD': 'OPjupiteR@32!',
-        'HOST': '',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd4vvb2rc39tbn8',
+        'USER': 'wzbddhtsxwiffw',
+        'PORT': '5432',
+        'PASSWORD': 'qd9_WPQE5_WFvRooHT8rQqfi3Q',
+        'HOST': 'ec2-54-243-201-116.compute-1.amazonaws.com',
         'PORT': '',
     }
 }

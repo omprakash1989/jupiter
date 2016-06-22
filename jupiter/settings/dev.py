@@ -28,28 +28,28 @@ else:
     LOG_LEVEL = "INFO"
 
 # Change db host name here once the production db is setup
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'heroku_573805d7138bae0',
-#         'USER': 'b2830c5a2881b0',
-#         'PASSWORD': '656cd551',
-#         'HOST': 'http://b2830c5a2881b0:656cd551@us-cdbr-iron-east-04.cleardb.net',
-#         'PORT': '',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd4vvb2rc39tbn8',
-        'USER': 'wzbddhtsxwiffw',
-        'PORT': '5432',
-        'PASSWORD': 'qd9_WPQE5_WFvRooHT8rQqfi3Q',
-        'HOST': 'ec2-54-243-201-116.compute-1.amazonaws.com',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'jupiter',
+        'USER': 'omprakash',
+        'PASSWORD': 'OPjupiteR@32!',
+        'HOST': '',
         'PORT': '',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'd4vvb2rc39tbn8',
+#         'USER': 'wzbddhtsxwiffw',
+#         'PORT': '5432',
+#         'PASSWORD': 'qd9_WPQE5_WFvRooHT8rQqfi3Q',
+#         'HOST': 'ec2-54-243-201-116.compute-1.amazonaws.com',
+#         'PORT': '',
+#     }
+# }
 
 # DEBUG TOOLBAR.
 ENABLE_DEBUG_TOOLBAR = False

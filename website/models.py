@@ -20,8 +20,11 @@ class Banners(models.Model):
     is_active = models.BooleanField(db_index=True, default=True)
     updated_at = models.DateTimeField()
 
-    # def save(self, *args, **kwargs):
-    #     self.updated_at = datetime.datetime.now()
+    def __unicode__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        self.updated_at = datetime.datetime.now()
 
 
 class Category(models.Model):
@@ -33,6 +36,9 @@ class Category(models.Model):
     updated_at = models.DateTimeField(null=True)
     is_active = models.BooleanField(db_index=True, default=True)
 
+    def __unicode__(self):
+        return self.display_name
+
 
 class Products(models.Model):
     name = models.CharField(max_length=100, blank=False)
@@ -40,17 +46,29 @@ class Products(models.Model):
     image_url = models.ImageField(upload_to='product/')
     price_effective = models.FloatField(default=1)
     price_marked = models.FloatField(default=1)
+    product_info = models.TextField(blank=True)
+    product_description = models.TextField(blank=True)
     discount = models.FloatField(default=0)
-    priority = models.IntegerField(null=True, default=True)
+    priority = models.IntegerField(null=True, default=0)
     updated_on = models.DateTimeField(null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(db_index=True, default=True)
-    category_id = models.ForeignKey(Category, null=True)
+    category = models.ForeignKey(Category, null=True)
 
     def save(self, *args, **kwargs):
         self.updated_at = datetime.datetime.now()
+
+    def __unicode__(self):
+        return self.name
 
 
 class ProductImages(models.Model):
     image_url = models.ImageField(upload_to='product_images/')
     product_id = models.ForeignKey(Products, db_index=True, null=True)
+
+
+class HomePageSegments(models.Model):
+    category = models.ForeignKey(Category, null=True, unique=True)
+
+    def __unicode__(self):
+        return self.category.display_name
