@@ -1,6 +1,6 @@
 from jupiter.settings.common_settings import *
 
-DEBUG = True
+DEBUG = False
 
 DEFAULT_SITE_DOMAIN = 'http://scrambledjupiter.herokuapp.com/'
 IMAGE_DOMAIN = 'http://scrambledjupiter.herokuapp.com'
@@ -8,9 +8,9 @@ THUMBOR_SERVER_URL = 'http://localhost:8888'
 
 OMS_API_POINT = 'http://localhost:8888/api/v1/oms/'
 
-AUTHENTICATION_BACKENDS = (
-    'account.auth_backend.DjangoCustomAuthentication',
-)
+# AUTHENTICATION_BACKENDS = (
+#     'account.auth_backend.DjangoCustomAuthentication',
+# )
 
 CACHES = {
     "default": {
