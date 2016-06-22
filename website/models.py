@@ -23,8 +23,8 @@ class Banners(models.Model):
     def __unicode__(self):
         return self.name
 
-    def save(self, *args, **kwargs):
-        self.updated_at = datetime.datetime.now()
+    # def save(self, *args, **kwargs):
+    #     self.updated_at = datetime.datetime.now()
 
 
 class Category(models.Model):
@@ -55,8 +55,8 @@ class Products(models.Model):
     is_active = models.BooleanField(db_index=True, default=True)
     category = models.ForeignKey(Category, null=True)
 
-    def save(self, *args, **kwargs):
-        self.updated_at = datetime.datetime.now()
+    # def save(self, *args, **kwargs):
+    #     self.updated_at = datetime.datetime.now()
 
     def __unicode__(self):
         return self.name
