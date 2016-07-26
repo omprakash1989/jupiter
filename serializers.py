@@ -23,7 +23,7 @@ class ProductListingSerializer(serializers.Serializer):
     action_url = serializers.SerializerMethodField()
 
     def get_image_url(self, obj):
-        return "%s/%s" % (DEFAULT_SITE_DOMAIN, obj.image_url)
+        return "%s%s%s" % (DEFAULT_SITE_DOMAIN, 'media/', obj.image_url)
 
     def get_action_url(self, obj):
-        return "%s/%s" % (DEFAULT_SITE_DOMAIN, obj.image_url)
+        return "%s%s" % (DEFAULT_SITE_DOMAIN, obj.image_url)
