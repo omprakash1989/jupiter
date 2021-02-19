@@ -1,4 +1,4 @@
 Project Jupiter
 ===============
 
-Author Om Prakash<oppradhan2011@gmail.com>
+Author: Om Prakash <oppradhan2011@gmail.com>
