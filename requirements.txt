@@ -5,7 +5,7 @@ botocore==1.4.27
 celery==3.1.18
 dj-database-url==0.3.0
 dj-static==0.0.6
-Django==1.8.4
+Django==1.11.29
 django-cors-headers==1.1.0
 django-filter==0.10.0
 django-redis==4.2.0
